@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/styles/dark.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Jeditable</h1>
+                    <h6> A jquery plugin</h6>
+                    <p> by Julie Veal</p>
+				</section>
+				<section>
+                	<h2>What is Jeditable?</h2>
+                    <p>Jeditable is inplace editor for jQuery. You can click and edit html elements right on the web page. When the user clicks the block of text it becomes a form. User then presses submit. The info is sent to the webserver and saved.
+                </section>
+                <section>
+                    	<h2>Why Jeditable?</h2>
+                        <p>I chose Jeditable because it is an inplace editor plugin for jQuery. I can see myself using it to do children's ebooks where a child can input their name, etc. and make their own ebook online for print. It can also be used anywhere there is a need for an online form.</p>
+                    
+                    </section>
+                    <section>
+                    	<h2>Pros and Cons</h2>
+                        <ol>Pros - 
+                        	<li>You can get full control of the Ajax request by submitting to the function instead of URL. Parameters passed are same as with callback.</li>
+                        	<li>There are several custom inputs: inlined select, normal, double-click and mouse-over.
+                            </li>
+                        </ol>
+                            <br>
+                        <ol>Cons - 
+                            <li>Some people are concerned about extra request made to server. You can also combine these two approaches. Let PHP output JSON encoded array directly into JavaScript code.</li>
+                            
+                    	</ol>
+                    </section>
+					<section>
+                		<section>
+                		<h2>How to set it up?</h2>
+                    	<ol>
+                    	<li><a href ="#/4/1">Setup</a></li>
+                        <li><a href ="#/4/2">Code</a></li>
+                        <li><a href ="#/4/3">Examples</a></li>
+                    	</ol>
+                		</section>
+                    	<section>
+                    	<h2>Setup</h2>
+<li>Must have the following elements:<pre><code>
+<div class="edit" id="div_1">Edit this.</div>
+<div class="edit_area" id="div_2">Edit this text area.
+</div> </code></pre></li>
+<li>Add the url where the posts will post edited text.<pre><code>
+$(document).ready(function() {
+	$('.edit').editable('http://www.example.com/save.php', {
+	indicator : 'Saving...',
+	tooltip   : 'Click to edit...'
+	});
+$('.edit_area').editable('http://www.example.com/save.php', {
+	type      : 'textarea',
+	cancel    : 'Cancel',
+	submit    : 'OK',
+	indicator : '<img src="img/indicator.gif">',
+	tooltip   : 'Click to edit...'
+	});
+}); </code></pre></li>
+                    </section>
+                    <section>
+                    	<h2>Code View</h2>
+                     	<div class="fragment highlight-blue">
+                        <pre>
+                        <code>
+&lt;div id=&quot;wrap&quot;&gt; 
+&lt;div id=&quot;header&quot;&gt; 
+&lt;p&gt; &lt;/p&gt; 
+&lt;h1&gt;Jeditable&lt;/h1&gt; 
+&lt;/div&gt; 
+&lt;div id=&quot;content&quot;&gt; 
+&lt;div class=&quot;entry&quot;&gt; 
+&lt;h2&gt;Normal textarea&lt;/h2&gt; 
+&lt;p id=&quot;paragraph_1&quot; class=&quot;editable_textarea&quot;&gt;type something&lt;/p&gt; 
+&lt;h2&gt;Inlined select&lt;/h2&gt; &lt;p&gt;I am in &lt;b id=&quot;select_1&quot; 
+class=&quot;editable_select&quot; style=&quot;display: inline&quot;&gt; blank&lt;/b&gt; grade&lt;/p&gt; 
+&lt;h2&gt;Paragraph&lt;/h2&gt; 
+&lt;div id=&quot;paragraph_2&quot; class=&quot;editable_textile&quot; title=&quot;Click to edit...&quot;&gt; 
+&lt;p&gt;Add your own type here.&lt;/p&gt; 
+&lt;/div&gt; 
+&lt;h2&gt;Different events&lt;/h2&gt; &lt;p&gt;&lt;strong class=&quot;click&quot; style=&quot;display: inline&quot; 
+title=&quot;Click to edit...&quot;&gt;Click me!&lt;/strong&gt;or maybe you should 
+&lt;strong class=&quot;dblclick&quot; style=&quot;display: inline&quot; title=&quot;Doubleclick to edit...&quot;&gt;
+doubleclick&lt;/strong&gt; instead? You can just&lt;strong class=&quot;mouseover&quot; style=&quot;display: inline&quot; 
+title=&quot;Move mouseover to edit...&quot;&gt; 
+mouseover me instead here.&lt;/strong&gt;... &lt;/p&gt; 
+&lt;/div&gt; 
+                        </code>
+                        </pre>
+                        </div>
+                    </section>
+                    <section>
+                    	<h2>Video and Examples</h2>
+                     	<ol>
+                    	<li><a href="https://www.youtube.com/channel/UCvjM1h08AHBAdux-jqta6RA/feed" target="_blank">Examples</a></li>
+                        <li><a href ="<a href="https://www.youtube.com/channel/UCvjM1h08AHBAdux-jqta6RA/feed" target="_blank">Video Presentation</a></li>
+                        </ol>
+                    </section>
+                </section>                              
+            </section>
+                <section>
+                </section>
+                	
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme || 'night', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

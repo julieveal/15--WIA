@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+<title>Another In-Place Editor</title>
+
+<link type="text/css" rel="stylesheet" href="css/main2.css">
+<link type="text/css" rel="stylesheet" href="css/main.css">
+<script src="/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/jquery.editinplace.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jeditable.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+<div id="wrap">
+		<div id="header">
+			<p> </p>
+			<h1>Jeditable</h1>			
+		</div>
+	<div id="content">
+	<div class="entry">			
+		<h2>Normal textarea</h2>
+			<p id="paragraph_1" class="editable_textarea">type something</p>
+		<h2>Inlined select</h2>
+		<p>I am in <b id="select_1" class="editable_select" style="display: inline"> blank</b>
+		grade
+		</p>
+		<h2>Paragraph</h2>
+		<div id="paragraph_2" class="editable_textile" title="Click to edit...">
+		<p>Add your own type here.</p>
+	</div>
+		<h2>Different events</h2>
+		<p><strong class="click" style="display: inline" title="Click to edit...">Click me!</strong>or maybe you should <strong class="dblclick" style="display: inline" title="Doubleclick to edit...">doubleclick</strong> instead? You can just<strong class="mouseover" style="display: inline" title="Move mouseover to edit..."> mouseover me instead here.</strong>... </p>
+</div>
+
+</body>
+
+</html>

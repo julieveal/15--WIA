@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+    background: url("../images/bg_black.jpg") repeat-x scroll 0 0 #fff;
+    color: #666;
+    font: 15px/1.4em Arial,Helvetica,Geneva,sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#wrap {
+    margin: 0 auto;
+    text-align: left;
+    width: 800px;
+}
+#content {
+    background: none repeat scroll 0 0 #fff;
+    float: left;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 550px;
+}
+#sidebar {
+    background: none repeat scroll 0 0 #fff;
+    float: right;
+    overflow: hidden;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 220px;
+}
+#header {
+    clear: both;
+    display: block;
+    height: 89px;
+    padding-left: 8px;
+    padding-top: 17px;
+}
+#footer {
+    clear: both;
+}
+h1, h2, h3 {
+    color: #2fbe35;
+    font-family: helvetica,arial,sans-serif;
+    letter-spacing: -1px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 28px;
+}
+
+p, form {
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+
+ul {
+    margin: 0;
+    padding-left: 35px;
+}
+
+a:link, a:visited {
+    border-bottom: 1px dotted #3e8da7;
+    color: #3e8da7;
+    text-decoration: none;
+}
+a:hover {
+    border-bottom: 1px solid #3e8da7;
+    color: #3e8da7;
+    text-decoration: none;
+}
+a:active {
+    outline: medium none;
+}
+a:focus {
+}
+
